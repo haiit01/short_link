@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: haicv2024
+  host: localhost
+
+development:
+  <<: *default
+  database: myapp_development
+
+test:
+  <<: *default
+  database: myapp_test
+
+production:
+  <<: *default
+  database: myapp_production
+  username: <%= ENV['MYAPP_DATABASE_USERNAME'] %>
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  host: <%= ENV['MYAPP_DATABASE_HOST'] %>
