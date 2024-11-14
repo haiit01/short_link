@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
   pool: 5
   timeout: 5000
-  username: postgres
+  username: root
   password: haicv2024
   host: localhost
 

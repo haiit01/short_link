@@ -10,27 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_12_121500) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_13_143117) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "links", force: :cascade do |t|
-    t.string "original_url"
-    t.string "short_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "short_links", force: :cascade do |t|
-    t.string "original_url"
-    t.string "short_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "short_urls", force: :cascade do |t|
-    t.string "original_url"
-    t.string "short_url"
+    t.string "original_url", null: false
+    t.string "short_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
